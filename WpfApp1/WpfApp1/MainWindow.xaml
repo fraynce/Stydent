@@ -98,26 +98,41 @@
             </Canvas.Triggers>
         </Canvas>
         <Canvas Grid.Row="1" Margin="0,3,0,0" Grid.ColumnSpan="2">
-            <Grid Width="200" Height="200">
-                <Rectangle Fill="Red" Width="200" Height="200"/>
-                <Ellipse x:Name="Down" Fill="White" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Path Stroke="Black" Data="M80,100 L120,100 M100,100 L100,140" StrokeThickness="10"/>
-            </Grid>
-            <Canvas.Triggers>
-                <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetName="Down" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="Blue" Duration="0:0:1" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="MouseLeave">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation Storyboard.TargetName="Down" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="White" Duration="0:0:1" />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
+                            <Grid Width="200" Height="200">
+                    <Ellipse x:Name="Down" Fill="red" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Ellipse x:Name="Down1" Fill="Red" Width="160" Height="160" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Path  Stroke="White" Data="M30,100 L170,100" StrokeThickness="30"/>
+                </Grid>
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="Down" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="Blue" Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseEnter">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="Down1" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="Teal" Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="Down" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="White" Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="MouseLeave">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ColorAnimation Storyboard.TargetName="Down1" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="Red" Duration="0:0:1" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
             </Canvas.Triggers>
         </Canvas>
 
