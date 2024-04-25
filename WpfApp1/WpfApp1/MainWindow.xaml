@@ -129,7 +129,7 @@
                     <EventTrigger RoutedEvent="MouseLeave">
                         <BeginStoryboard>
                             <Storyboard>
-                                <ColorAnimation Storyboard.TargetName="Down1" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="Red" Duration="0:0:1" />
+                                <ColorAnimation Storyboard.TargetName="Down1" Storyboard.TargetProperty="Fill.(SolidColorBrush.Color)" To="Yello" Duration="0:0:1" />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger>
